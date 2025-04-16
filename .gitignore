@@ -1,0 +1,103 @@
+﻿# Build results
+bin/
+obj/
+[Bb]uild*/
+[Ll]og/
+*.log
+
+# User-specific files
+*.user
+*.userprefs
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Xamarin specific
+*.apk
+*.ap_
+*.aab
+*.ipa
+*.app
+
+# iOS build results
+build/
+*.dSYM/
+
+# Android Studio artifacts (if ever used)
+.gradle/
+.idea/
+local.properties
+
+# VS for Mac
+.vscode/
+.DS_Store
+
+# Visual Studio
+.vs/
+.vscode/
+*.dbmdl
+*.bak
+*.sql
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+project.lock.json
+project.fragment.lock.json
+artifacts/
+packages/
+*.nuget.props
+*.nuget.targets
+*.csproj.nuget.g.props
+*.csproj.nuget.g.targets
+
+# Xamarin Components
+Components/
+*.xamarin*
+
+# Auto-generated files
+*.g.cs
+*.g.i.cs
+*.i.cs
+
+# Crashlytics / Firebase (if present)
+crashlytics-build.properties
+
+# JetBrains (Rider, ReSharper)
+.idea/
+*.DotSettings.user
+
+# Backup files
+*.swp
+*.swo
+*.bak
+*~ 
+
+# macOS stuff
+*.DS_Store
+*.AppleDouble
+.AppleDouble
+
+# Windows stuff
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+*.pid
+*.pid.lock
+
+# Certificate / sensitive files (if any)
+*.pfx
+*.keystore
+*.jks
+
+# Local environment config
+.env
+.env.*
+local.settings.json
+secrets.json

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Nexia.App">
+    <Application.Resources>
+
+        <ResourceDictionary>
+
+            <!-- %%%%%%%%%%%%%%%%%%% MY COLORS %%%%%%%%%%%%%%%%%%%%%%% -->
+            <Color x:Key="LightClr1">#F5F5F5</Color>
+            <Color x:Key="LightClrTransp1">#60F5F5F5</Color>
+            <Color x:Key="LightClr2">#D6D6D6</Color>
+            <Color x:Key="LightClrTransp2">#60D6D6D6</Color>
+
+            <Color x:Key="DarkClr1">#000000</Color>
+            <Color x:Key="DarkClrTransp1">#90000000</Color>
+            <Color x:Key="DarkClr2">#252525</Color>
+            <Color x:Key="DarkClrTransp2">#60252525</Color>
+            <!-- %%%%%%%%%%%%%%%%%%% END - MY COLORS %%%%%%%%%%%%%%%%%%%%%%% -->
+            
+            
+            <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MY STYLES %%%%%%%%%%%%%%%%%%%%%%%%%%-->
+            <OnPlatform x:TypeArguments="x:String" x:Key="Minercraftory">
+                <On Platform="Android" Value="Minercraftory.ttf#Minercraftory" />
+                <On Platform="iOS" Value="Minercraftory" />
+            </OnPlatform>
+
+            <Style x:Key="PixelLabel" TargetType="Label" ApplyToDerivedTypes="True">
+                <Setter Property="FontFamily" Value="{StaticResource Minercraftory}" />
+            </Style>
+
+
+            <Style x:Key="DialogButton" TargetType="Button" ApplyToDerivedTypes="True">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="{StaticResource LightClr1}" />
+                <Setter Property="TextTransform" Value="None" />
+            </Style>
+            <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END - MY STYLES %%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+        </ResourceDictionary>
+        
+    </Application.Resources>
+</Application>

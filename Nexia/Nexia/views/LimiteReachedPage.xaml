@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Nexia.views.LimiteReachedPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <Image Source="robot_sorry.jpg" Aspect="AspectFill" />
+
+            <BoxView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#C0274060"/>
+
+            <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" Padding="20">
+
+                <Label x:Name="noRunAppMessage" Text="Oops! You've reached your limit."
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,20,0,0" TextColor="{StaticResource LightClr1}"/>
+
+                <Label Text="To continue using this application, visit my website 'kingweb.pythonanywhere.com' and contact me."
+                       FontSize="12"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       Margin="0,10,0,0" TextColor="{StaticResource LightClr1}"/>
+                
+                <Label Text="Thank you!"
+                       FontSize="10"
+                       HorizontalOptions="Center"
+                       Margin="0,10,0,0" TextColor="{StaticResource LightClr1}"/>
+
+                <Label Text="Developed by King Kakatsi"
+       FontSize="10"
+       HorizontalOptions="End"
+       Margin="0,60,0,0" TextColor="{StaticResource LightClrTransp1}"/>
+
+            </StackLayout>
+
+                
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

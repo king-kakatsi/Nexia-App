@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             BackgroundImageSource="background.png"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="Nexia.views.ScannerPage">
+    <ContentPage.Content>
+
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Margin="20, 0" Spacing="30">
+
+            <Grid HeightRequest="400" WidthRequest="350" HorizontalOptions="Center">
+                <!--%%%%%%%%%%%%%%%%%%%%%%%%% FRAME %%%%%%%%%%%%%%%%%%%%%%%%-->
+                <Image Source="cadre.png" BackgroundColor="Transparent" Aspect="Fill"/>
+                <!--%%%%%%%%%%%%%%%%%%%%%%%%% FRAME %%%%%%%%%%%%%%%%%%%%%%%%-->
+                
+
+                <!--%%%%%%%%%%%%%%%%%%%%%%%%% IMAGE SENT FOR DETECTION %%%%%%%%%%%%%%%%%%%%%%%%-->
+                <Image x:Name="imageBox" BackgroundColor="Gray" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="20"/>
+                <!--%%%%%%%%%%%%%%%%%%%%%%%%% IMAGE SENT FOR DETECTION %%%%%%%%%%%%%%%%%%%%%%%%-->
+                
+
+                <!--%%%%%%%%%%%%%%%%%%%%%%%%% SCANNER LASER %%%%%%%%%%%%%%%%%%%%%%%%-->
+                <Image Source="laser.png" x:Name="scannerLaser" VerticalOptions="Start" Margin="0, -10, 0, 0" HorizontalOptions="FillAndExpand" Opacity="0"/>
+                <!--%%%%%%%%%%%%%%%%%%%%%%%%% SCANNER LASER %%%%%%%%%%%%%%%%%%%%%%%%-->
+                
+
+                <!--%%%%%%%%%%%%%%%%%%%% OVERLAY WITH INFORMATIONS AT IMAGE BOTTOM %%%%%%%%%%%%%%%%%%%%%%%%%-->
+                <Grid x:Name="detectedAttributesView" VerticalOptions="End" BackgroundColor="#90000000" HeightRequest="86" Margin="20" Padding="10, 0, 10, 5" IsVisible="False">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Gender" Grid.Row="0" Grid.Column="0" FontSize="14" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" Style="{StaticResource PixelLabel}" TextColor="{StaticResource LightClr1}"/>
+
+                    <Label x:Name="genderLabel" Grid.Row="1" Grid.Column="0" Text="xxx" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" HorizontalTextAlignment="Center" Style="{StaticResource PixelLabel}" TextColor="{StaticResource LightClr1}"/>
+
+                    <Label Text="Age" Grid.Row="0" Grid.Column="1" FontSize="14" VerticalOptions="Center" Style="{StaticResource PixelLabel}" HorizontalTextAlignment="Center" TextColor="{StaticResource LightClr1}"/>
+
+                    <Label x:Name="ageLabel" Grid.Row="1" Grid.Column="1" Text="xxx" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" Style="{StaticResource PixelLabel}" TextColor="{StaticResource LightClr1}"/>
+                    
+                </Grid>
+                
+                <!--<StackLayout x:Name="detectedAttributesView" Orientation="Horizontal" VerticalOptions="End" BackgroundColor="#90000000" HeightRequest="88" Margin="20" Padding="10, 0, 10, 5" IsVisible="False">
+                    
+
+                    <Label x:Name="genderLabel" Text="xxx" HorizontalOptions="FillAndExpand" FontSize="27" VerticalOptions="End" Style="{StaticResource PixelLabel}" TextColor="{StaticResource LightClr1}"/>
+
+                    <Label Text="Age:" FontSize="17" VerticalOptions="End" Margin="0, 0, 0, 5" Style="{StaticResource PixelLabel}" TextColor="{StaticResource LightClr1}"/>
+
+                    <Label x:Name="ageLabel" Text="xxx" FontSize="27" VerticalOptions="End" Style="{StaticResource PixelLabel}" TextColor="{StaticResource LightClr1}"/>
+
+
+                </StackLayout>-->
+                <!--%%%%%%%%%%%%%%%%%%%% OVERLAY WITH INFORMATIONS AT IMAGE BOTTOM %%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+                
+            </Grid>
+
+            <Label x:Name="scanMsgLabel" Text="Scanning..." VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"  TextColor="{StaticResource LightClr2}"/>
+
+            <Grid x:Name="continueButtonFrame">
+                <Image Source="dark_button_frame.png" WidthRequest="0" HeightRequest="0" xct:IconTintColorEffect.TintColor="{StaticResource LightClr1}"/>
+                <Button x:Name="continueButton" Text="Cancel" BackgroundColor="Transparent" TextTransform="None" Clicked="ContinueButton_Clicked"  TextColor="{StaticResource LightClr1}" Margin="10, 2, 10, 5"/>
+            </Grid>
+                
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

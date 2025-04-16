@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit" 
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             BackgroundImageSource="background.png"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="Nexia.MainPage">
+
+
+    <AbsoluteLayout VerticalOptions="FillAndExpand">
+
+        <StackLayout VerticalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+            <StackLayout VerticalOptions="CenterAndExpand">
+
+                <forms:AnimationView
+            x:Name="lottieAnimationView"
+            Animation="face-scan.json"
+            AnimationSource="AssetOrBundle"
+            Command="{Binding LottieAnimationCommand}"
+            RepeatMode="Infinite"
+            HeightRequest="200"
+            WidthRequest="200"
+            Margin="0, 0, 0, 30"/>
+
+                <Grid>
+                    <Image Source="dark_button_frame.png" WidthRequest="0" HeightRequest="0" xct:IconTintColorEffect.TintColor="{StaticResource LightClr1}"/>
+                    <Button Text="Scan a face" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent" Clicked="SelectPictureOptions_Clicked" TextTransform="None" TextColor="{StaticResource LightClr1}" Margin="10, 2, 10, 5"/>
+                </Grid>
+
+
+
+            </StackLayout>
+
+            <Label Text="Developed by King Kakatsi" FontSize="10" VerticalOptions="End" HorizontalOptions="End" Padding="15" TextColor="{StaticResource LightClrTransp1}"/>
+        </StackLayout>
+
+        
+        
+        <Grid x:Name="pictureOptionsDialog" VerticalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" Opacity="0" IsVisible="false">
+
+            <Button VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource DarkClrTransp1}" Clicked="DismissDialog_clicked"/>
+
+            
+            <StackLayout Margin="15, 0" Padding="20, 50" Spacing="20" BackgroundColor="{StaticResource DarkClr2}" HorizontalOptions="FillAndExpand" VerticalOptions="Center" xct:CornerRadiusEffect.CornerRadius="20">
+
+                <Button Text="Take picture" Style="{StaticResource DialogButton}" Clicked="TakePicture_Clicked"/>
+                <Button Text="Select picture" Style="{StaticResource DialogButton}" Clicked="SelectPicture_Clicked"/>
+                
+            </StackLayout>
+
+        </Grid>
+
+    </AbsoluteLayout>
+    
+</ContentPage>
