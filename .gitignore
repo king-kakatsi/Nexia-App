@@ -1,103 +1,74 @@
-﻿# Build results
+# Build results
 bin/
 obj/
-[Bb]uild*/
-[Ll]og/
-*.log
 
 # User-specific files
 *.user
-*.userprefs
 *.suo
+*.userprefs
 *.userosscache
 *.sln.docstates
 
-# Xamarin specific
-*.apk
-*.ap_
-*.aab
-*.ipa
-*.app
-
-# iOS build results
-build/
-*.dSYM/
-
-# Android Studio artifacts (if ever used)
-.gradle/
-.idea/
-local.properties
-
-# VS for Mac
-.vscode/
-.DS_Store
+# Mono Auto Generated Files
+mono_crash.*
 
 # Visual Studio
 .vs/
 .vscode/
 *.dbmdl
 *.bak
-*.sql
+*.backup
+*.log
+*.tlog
+*.pdb
+*.cache
+*.ide
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.VC.opendb
 
-# NuGet
-*.nupkg
-*.snupkg
-*.nuspec
-project.lock.json
-project.fragment.lock.json
-artifacts/
-packages/
-*.nuget.props
-*.nuget.targets
-*.csproj.nuget.g.props
-*.csproj.nuget.g.targets
+# Xamarin
+TestResults/
 
-# Xamarin Components
-Components/
-*.xamarin*
+# Android
+Nexia.Android/Resources/Resource.designer.cs
+Nexia.Android/obj/
+Nexia.Android/bin/
+Nexia.Android/.vs/
 
-# Auto-generated files
-*.g.cs
-*.g.i.cs
-*.i.cs
+# iOS
+Nexia.iOS/obj/
+Nexia.iOS/bin/
+Nexia.iOS/.vs/
 
-# Crashlytics / Firebase (if present)
-crashlytics-build.properties
+# Mac
+.DS_Store
 
-# JetBrains (Rider, ReSharper)
-.idea/
-*.DotSettings.user
-
-# Backup files
-*.swp
-*.swo
-*.bak
-*~ 
-
-# macOS stuff
-*.DS_Store
-*.AppleDouble
-.AppleDouble
-
-# Windows stuff
+# Windows
 Thumbs.db
-ehthumbs.db
 Desktop.ini
 
-# Temporary files
+# Packages
+*.nupkg
+packages/
+
+# Others
+*.apk
+*.ap_*
+*.ipa
+*.zip
 *.tmp
 *.temp
-*.cache
-*.pid
-*.pid.lock
+*.log
+*.swp
+*.swo
+*.swn
+*.DS_Store
+.idea/
 
-# Certificate / sensitive files (if any)
-*.pfx
-*.keystore
-*.jks
-
-# Local environment config
-.env
-.env.*
-local.settings.json
+# Ignore secrets file
 secrets.json
+
+# Ignore secret keys class
+Nexia/services/SecretKeys.cs 
