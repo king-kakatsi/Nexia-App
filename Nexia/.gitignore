@@ -1,0 +1,74 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userprefs
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Visual Studio
+.vs/
+.vscode/
+*.dbmdl
+*.bak
+*.backup
+*.log
+*.tlog
+*.pdb
+*.cache
+*.ide
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.VC.opendb
+
+# Xamarin
+TestResults/
+
+# Android
+Nexia.Android/Resources/Resource.designer.cs
+Nexia.Android/obj/
+Nexia.Android/bin/
+Nexia.Android/.vs/
+
+# iOS
+Nexia.iOS/obj/
+Nexia.iOS/bin/
+Nexia.iOS/.vs/
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Packages
+*.nupkg
+packages/
+
+# Others
+*.apk
+*.ap_*
+*.ipa
+*.zip
+*.tmp
+*.temp
+*.log
+*.swp
+*.swo
+*.swn
+*.DS_Store
+.idea/
+
+# Ignore secrets file
+secrets.json
+
+# Ignore secret keys class
+Nexia/services/SecretKeys.cs 

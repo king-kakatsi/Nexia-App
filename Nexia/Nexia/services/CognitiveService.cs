@@ -16,8 +16,7 @@ namespace Nexia.services
     public static class CognitiveService
     {
         // %%%%%%%%%%%%%%%%%%%%%%%% PROPERTIES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        private static string API_KEY = "E6dX-Jxup5362Zptxn5eGyV3QLwjZL_c";
-        private static string API_SECRET = "3bnT3HSPTejhxrHZOw6wykIrog0mNolC";
+        // Use SecretKeys for API credentials
         // %%%%%%%%%%%%%%%%%%%%%%%% END - PROPERTIES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -29,7 +28,7 @@ namespace Nexia.services
         public static async Task<Face> DetectFace(Stream imageStream, CancellationToken token)
         {
             // Build the URL with the API key and secret as query parameters
-            var url = $"https://api-us.faceplusplus.com/facepp/v3/detect?api_key={API_KEY}&api_secret={API_SECRET}";
+            var url = $"https://api-us.faceplusplus.com/facepp/v3/detect?api_key={SecretKeys.API_KEY}&api_secret={SecretKeys.API_SECRET}";
 
             if (imageStream == null)
                 return null;
